@@ -1,0 +1,87 @@
+.aboutSection {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f1f3f9; /* body color fallback */
+}
+
+/* Background */
+.bgWrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bgImage {
+  object-fit: cover;
+}
+
+/* ✅ Light overlay to blend with body color */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(241, 243, 249, 0.8); /* your body color with transparency */
+}
+
+/* Content */
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+  padding: 30px 20px;
+  text-align: center;
+  padding: 0rem 150px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--th-text-dark);
+}
+
+.text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 400;
+  color: var(--th-text-light);
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutSection {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #f1f3f9; /* body color fallback */
+  }
+
+  /* Content */
+  .contentWrapper {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px 10px;
+    text-align: justify;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--th-text-dark);
+  }
+
+  .text {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: var(--th-text-light);
+  }
+}

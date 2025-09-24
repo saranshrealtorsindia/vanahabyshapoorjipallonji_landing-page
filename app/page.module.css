@@ -1,0 +1,27 @@
+.herosection_container {
+  margin-bottom: 50px;
+}
+
+.section_container {
+  margin-bottom: 50px;
+  margin: 50px 150px;
+}
+
+.fullwidth_section {
+  margin-bottom: 50px;
+  margin: 50px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .herosection_container {
+    margin-bottom: 20px;
+  }
+  .section_container {
+    margin-bottom: 50px;
+    margin: 20px 0px;
+  }
+  .fullwidth_section {
+    margin-bottom: 50px;
+    margin: 30px 0px;
+  }
+}

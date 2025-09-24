@@ -1,0 +1,114 @@
+.nav_main_container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  box-shadow: var(--th-navbox-shadow);
+  background-color: var(--th-white-color);
+  padding: 0px 150px;
+}
+
+.inner_container {
+  height: 80px;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo_wrapper {
+  width: 180;
+  height: 34;
+}
+
+.img_Style {
+  width: 100%;
+  height: 100%;
+}
+
+.rigeht_side_action_wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.contact_action_container {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.action_text {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: #000;
+}
+
+.action_text:hover {
+  color: var(--th-primary-color);
+}
+
+.action_iconBox {
+  color: var(--th-primary-color);
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsaap_iconBox {
+  color: #25d266;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* @media only screen and (max-width: 920px) {
+  .nav_main_container {
+    padding: 0px 50px;
+  }
+  .inner_container {
+    height: 50px;
+  }
+  .logo_wrapper {
+    width: 140;
+    height: 26.75;
+  }
+
+  .action_text {
+    display: none;
+  }
+  .enquire_btn_wrapper {
+    display: none;
+  }
+} */
+
+@media only screen and (max-width: 600px) {
+  .nav_main_container {
+    padding: 0px 10px;
+  }
+
+  .inner_container {
+    height: 50px;
+  }
+
+  .logo_wrapper {
+    width: 80;
+    height: 20.75;
+  }
+
+  .action_text {
+    display: none;
+  }
+  .enquire_btn_wrapper {
+    display: none;
+  }
+}

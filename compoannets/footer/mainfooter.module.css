@@ -1,0 +1,119 @@
+.dekstop_footer_wrapper {
+  display: flex;
+  background: #535a64;
+  height: 350px;
+  background-image: url("../../public/footer-map.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.mobile_footer_wrapper {
+  display: none;
+}
+
+.dekstop_footer_Container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #9da5af;
+  width: 100%;
+  padding: 70px 80px;
+}
+
+.inner_container {
+  width: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr_code_wrapper {
+  width: 138px;
+  height: 138px;
+  margin-bottom: 10px;
+}
+
+.imgStyle {
+  width: 100%;
+  height: 100%;
+}
+
+.tiny_text {
+  font-size: 9px;
+  margin-bottom: 5px;
+  color: #9da5af;
+  text-decoration: none;
+}
+
+.official_links {
+  display: flex;
+  font-size: 10px;
+  column-gap: 7px;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .dekstop_footer_wrapper {
+    display: none;
+  }
+  .mobile_footer_wrapper {
+    display: flex;
+  }
+
+  .mobile_footer_wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem;
+    background: transparent;
+    animation: slideUp 0.5s ease forwards;
+  }
+
+  /* Call Button */
+  .callBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #303843; /* use --th-text-dark or theme primary */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+  }
+
+  .callBtn:hover {
+    transform: scale(1.05);
+    background: #3d3e46; /* use --th-text-light */
+  }
+
+  .icon {
+    font-size: 1.1rem;
+  }
+
+  .number {
+    font-weight: 400;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  /* ✅ Slide-up animation */
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

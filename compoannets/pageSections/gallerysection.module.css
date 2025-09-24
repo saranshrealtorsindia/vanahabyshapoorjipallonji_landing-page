@@ -1,0 +1,65 @@
+.gallerySection {
+  padding: 3rem 1rem;
+  background: #fafafa;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.group {
+  margin-bottom: 3rem;
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* ✅ Grid for perfect alignment */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  aspect-ratio: 16 / 9; /* keeps rectangle ratio ~242x136 */
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}

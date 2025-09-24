@@ -1,0 +1,21 @@
+.main_container {
+  padding-top: 80px;
+}
+
+.inner_container {
+  height: 500px;
+  background-image: url("./../../public/hero-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .main_container {
+    padding-top: 50px;
+  }
+
+  .inner_container {
+    height: 250px;
+  }
+}

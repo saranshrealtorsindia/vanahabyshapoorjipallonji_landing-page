@@ -2,6 +2,7 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 import dynamicImport from "next/dynamic";
 import { GoogleTagManager } from "@next/third-parties/google";
+import ModelContextProvider from "@/contextApis/ModelContextProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,7 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` ${poppins.variable}`}>{children}</body>
+      <body className={` ${poppins.variable}`}>
+        <ModelContextProvider>{children}</ModelContextProvider>
+      </body>
     </html>
   );
 }

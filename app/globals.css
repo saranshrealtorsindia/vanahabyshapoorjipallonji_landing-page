@@ -5,6 +5,9 @@
   --th-navbox-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
   --th-body-bg: #f1f3f9;
   --th-primary-color: #1652a3;
+  --th-text-dark: #303843;
+  --th-text-light: #3d3e46;
+  /* #3d3e46 #303843 */
 }
 
 html,
