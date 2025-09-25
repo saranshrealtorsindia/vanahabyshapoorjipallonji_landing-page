@@ -20,17 +20,17 @@ export default function MainNavbar() {
         </Link>
         <div className={styles.rigeht_side_action_wrapper}>
           <Link
-            href="tel:+917503255500"
+            href="tel:+9174284 86574"
             className={styles.contact_action_container}
           >
             <div className={styles.action_iconBox}>
               <IoCall />
             </div>
-            <div className={styles.action_text}>+91 75032 55000</div>
+            <div className={styles.action_text}>+91 74284 86574</div>
           </Link>
 
           <Link
-            href="https://wa.link/th2fsn"
+            href="https://wa.link/izndv5"
             className={styles.contact_action_container}
           >
             <div className={styles.whatsaap_iconBox}>
