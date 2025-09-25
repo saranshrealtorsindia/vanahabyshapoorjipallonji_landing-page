@@ -14,8 +14,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "Shapoorji Pallonji",
-  description:
-    "Register now for the Shapoorji Pallonji Event on 30 & 31 August 2025. Don’t miss this exclusive opportunity—secure your spot and be part of the experience!",
+  description: "Shapoorji Pallonji.!",
 };
 
 export default function RootLayout({ children }) {
