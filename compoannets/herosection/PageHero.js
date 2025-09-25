@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./pagehero.module.css";
 import heroBg1 from "../../public/hero-bg-1.jpg";
-import heroBg2 from "../../public/hero-bg-2.jpg";
+import heroBg2 from "../../public/hero-new-1.jpg";
 import Image from "next/image";
 
 const images = [heroBg1, heroBg2]; // add more if needed
