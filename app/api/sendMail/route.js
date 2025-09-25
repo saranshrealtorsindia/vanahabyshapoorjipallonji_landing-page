@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { firstname, lastname, email, number, eventdate } = body || {};
+    const { firstname, lastname, email, number } = body || {};
 
     // basic validation
     if (!firstname || !email) {
@@ -35,7 +35,7 @@ export async function POST(request) {
       )}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       <p><strong>Phone:</strong> ${escapeHtml(number || "N/A")}</p>
-      <p><strong>Event Date:</strong> ${escapeHtml(eventdate || "N/A")}</p>
+    
     `;
 
     await transporter.sendMail({

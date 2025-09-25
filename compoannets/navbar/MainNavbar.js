@@ -15,7 +15,7 @@ export default function MainNavbar() {
             width={500}
             height={500}
             className={styles.img_Style}
-            alt="Shapoorji Pallonji Event Registration"
+            alt="Shapoorji Pallonji  Registration"
           />
         </Link>
         <div className={styles.rigeht_side_action_wrapper}>
