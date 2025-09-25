@@ -1,0 +1,68 @@
+.radio_wrapper {
+  display: inline-block;
+  margin-right: 12px;
+  position: relative;
+}
+
+/* Hide the default input */
+.radio_input {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 22px;
+  height: 22px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Label common style */
+.radio_label {
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* Small Circle Style */
+.small_circle .radio_label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d1d5db; /* gray-300 border */
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* When selected - fill with primary color */
+.small_circle .radio_input:checked + .radio_label::before {
+  background-color: var(--radio-color, #3b82f6);
+  border-color: var(--radio-color, #3b82f6);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 920px) {
+  .radio_wrapper {
+    margin-right: 10px;
+  }
+
+  .radio_input {
+    width: 15px;
+    height: 15px;
+  }
+  .radio_label {
+    gap: 4px;
+    font-size: 14px;
+  }
+
+  /* Small Circle Style */
+  .small_circle .radio_label::before {
+    width: 14px;
+    height: 14px;
+    border: 1.7px solid #d1d5db; /* gray-300 border */
+  }
+}
