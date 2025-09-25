@@ -9,22 +9,40 @@ const images = [heroBg1, heroBg2]; // add more if needed
 
 export default function PageHero() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    }, 4000); // every 4s
+      setCurrentIndex((prev) => prev + 1);
+      setIsTransitioning(true);
+    }, 4000); // slide every 4s
 
     return () => clearInterval(interval);
   }, []);
+
+  // When reaching the duplicate (index === images.length)
+  useEffect(() => {
+    if (currentIndex === images.length) {
+      // Wait for transition to finish, then reset instantly
+      const timeout = setTimeout(() => {
+        setIsTransitioning(false); // disable animation
+        setCurrentIndex(0); // jump back to first real slide
+      }, 1000); // match your CSS transition duration
+
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex]);
 
   return (
     <div className={styles.main_container}>
       <div
         className={styles.sliderTrack}
-        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+          transition: isTransitioning ? "transform 1s ease-in-out" : "none",
+        }}
       >
-        {images.map((img, index) => (
+        {[...images, images[0]].map((img, index) => (
           <div key={index} className={styles.slide}>
             <Image
               src={img}
