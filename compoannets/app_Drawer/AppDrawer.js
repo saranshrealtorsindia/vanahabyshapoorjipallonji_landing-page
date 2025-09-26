@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import styles from "./appdrawer.module.css";
 import { ModelsContext } from "@/contextApis/ModelContextProvider";
 import { IoCloseSharp } from "../Applicationicon";
+import DrawerEnquireBtn from "../buttons/DrawerEnquireBtn";
 
 export default function AppDrawer() {
   const { isAppDrawer, setisAppDrawer, handelToggleAppDrawer } =
@@ -44,7 +45,9 @@ export default function AppDrawer() {
           ))}
         </nav>
 
-        <div className={styles.footer}></div>
+        <div className={styles.footer}>
+          <DrawerEnquireBtn />
+        </div>
       </div>
     </>
   );
