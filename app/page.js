@@ -8,6 +8,7 @@ import AmenitiesSection from "@/compoannets/pageSections/AmenitiesSection";
 import GallerySection from "@/compoannets/pageSections/GallerySection";
 import AboutSection from "@/compoannets/pageSections/AboutSection";
 import MainFooter from "@/compoannets/footer/MainFooter";
+import PricePlanDetailSection from "@/compoannets/pageSections/PricePlanDetailSection";
 
 export default function HomePage() {
   return (
@@ -23,11 +24,14 @@ export default function HomePage() {
       </section>
 
       <section className={styles.section_container}>
-        <LocationSection />
+        <PricePlanDetailSection />
       </section>
 
       <section className={styles.section_container}>
         <AmenitiesSection />
+      </section>
+      <section className={styles.section_container}>
+        <LocationSection />
       </section>
       <section className={styles.section_container}>
         <GallerySection />

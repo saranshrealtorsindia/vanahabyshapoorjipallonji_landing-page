@@ -1,0 +1,115 @@
+/* Overlay behind drawer */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Drawer container */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 60vw; /* adjust (70-80% looks good) */
+  max-width: 340px;
+  background: #fff;
+  z-index: 100;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: right 0.35s ease;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15);
+  z-index: 100000;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+/* Header with logo + close */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--th-primary-color);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Nav links */
+.nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navLink {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--th-primary-color);
+}
+
+/* Footer with button */
+.footer {
+  margin-top: auto;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.enquireBtn {
+  width: 100% !important;
+  padding: 18px 30px;
+  height: 34px;
+  width: fit-content;
+  background: #e8eaef;
+  background-color: var(--th-primary-color);
+  color: var(--th-white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  border: none;
+}
+
+.enquireBtn:hover {
+  background-color: var(--th-primary-hovercolor-light);
+  color: var(--th-white-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .navLink {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

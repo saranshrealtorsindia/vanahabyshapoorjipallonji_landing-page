@@ -74,35 +74,46 @@
     animation: slideUp 0.5s ease forwards;
   }
 
-  /* Call Button */
-  .callBtn {
+  .mobile_footer_mainContainer {
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    height: 40px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    background: #303843; /* use --th-text-dark or theme primary */
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
+    justify-content: space-between;
+    padding: 20px 3px;
+  }
+
+  .callBtn {
     text-decoration: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: 50px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, background 0.3s ease;
+    color: var(--th-text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    border-right: 1px solid var(--th-text-dark);
   }
 
-  .callBtn:hover {
-    transform: scale(1.05);
-    background: #3d3e46; /* use --th-text-light */
+  .whatsaap_btn {
+    text-decoration: none;
+    color: #25d266;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22%;
+    border-right: 1px solid var(--th-text-dark);
   }
 
-  .icon {
-    font-size: 1.1rem;
-  }
-
-  .number {
-    font-weight: 400;
-    font-size: 0.9rem;
-    opacity: 0.9;
+  .enquire_btn {
+    text-decoration: none;
+    color: var(--th-text-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
   }
 
   /* ✅ Slide-up animation */

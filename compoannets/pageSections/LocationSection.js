@@ -38,7 +38,7 @@ export default function LocationSection() {
   ];
 
   return (
-    <div className={styles.top_mainContainer}>
+    <div className={styles.top_mainContainer} id="location">
       <div className={`${styles.section_heading} ${styles.large_mh_bottom}`}>
         <h2>Location connectivity </h2>{" "}
       </div>
@@ -120,6 +120,21 @@ export default function LocationSection() {
             />
           </div>
         </div>
+      </div>
+
+      <div>
+        <div className={styles.points_title}>
+          <h3>Google Map Location</h3>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.947116137302!2d73.747635!3d18.519364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf7b0cfb7f0d%3A0x1234567890abcdef!2sVanaha%20by%20Shapoorji%20Pallonji!5e0!3m2!1sen!2sin!4v1696512345678!5m2!1sen!2sin"
+          width="100%"
+          height="500"
+          style={{ border: 0, borderRadius: "12px" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
   );

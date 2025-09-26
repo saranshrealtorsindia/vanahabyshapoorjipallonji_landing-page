@@ -29,7 +29,7 @@ export default function AmenitiesSection() {
   ];
 
   return (
-    <div className={styles.amenities_container}>
+    <div className={styles.amenities_container} id="amenities">
       <h2 className={styles.heading}>World-Class Amenities</h2>
       <div className={styles.amenities_grid}>
         {amenities.map((item, index) => (

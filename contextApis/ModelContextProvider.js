@@ -4,15 +4,21 @@ import { createContext, useCallback, useRef, useState } from "react";
 export const ModelsContext = createContext();
 
 export default function ModelContextProvider({ children }) {
-  const [isModelOpen, setisModelOpen] = useState(true);
+  const [isModelOpen, setisModelOpen] = useState(false);
   const [isThanksOpen, setisThanksOpen] = useState(false);
+  const [isAppDrawer, setisAppDrawer] = useState(false);
 
   const handelToggleModel = useCallback(() => {
     setisModelOpen((prev) => !prev);
+    setisAppDrawer(false);
   }, []);
 
   const handelCloseThanksModel = useCallback(() => {
     setisThanksOpen(false);
+  }, []);
+
+  const handelToggleAppDrawer = useCallback(() => {
+    setisAppDrawer((prev) => !prev);
   }, []);
 
   return (
@@ -24,6 +30,9 @@ export default function ModelContextProvider({ children }) {
         isThanksOpen,
         setisThanksOpen,
         handelCloseThanksModel,
+        isAppDrawer,
+        setisAppDrawer,
+        handelToggleAppDrawer,
       }}
     >
       {children}

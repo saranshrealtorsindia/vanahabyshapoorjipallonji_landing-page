@@ -61,6 +61,29 @@
   cursor: not-allowed;
 }
 
+.enquireBtn {
+  width: 100% !important;
+  padding: 18px 30px;
+  height: 34px;
+  width: fit-content;
+  background: #e8eaef;
+  background-color: var(--th-primary-color);
+  color: var(--th-white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  border: none;
+}
+
+.enquireBtn:hover {
+  background-color: var(--th-primary-hovercolor-light);
+  color: var(--th-white-color);
+}
+
 @media only screen and (max-width: 600px) {
   .btn_container {
     padding: 16px 20px;

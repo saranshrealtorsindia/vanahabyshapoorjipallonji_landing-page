@@ -14,7 +14,7 @@ export default function TopSection() {
   ];
 
   return (
-    <div className={styles.top_mainContainer}>
+    <div className={styles.top_mainContainer} id="overview">
       <div className={styles.section_heading}>
         <h2>Presenting luxury homes with Mesmerising views </h2>{" "}
       </div>

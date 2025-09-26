@@ -3,6 +3,8 @@ import { Poppins } from "next/font/google";
 import dynamicImport from "next/dynamic";
 import { GoogleTagManager } from "@next/third-parties/google";
 import ModelContextProvider from "@/contextApis/ModelContextProvider";
+import AppDrawer from "@/compoannets/app_Drawer/AppDrawer";
+import ActionIcon from "@/contextApis/actionIcon/ActionIcon";
 
 const EnquireModel = dynamicImport(
   () => import("@/compoannets/model/EnquireModel"),
@@ -60,6 +62,20 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={` ${poppins.variable}`}>
         <ModelContextProvider>
+          <div className="action_icons_warrper">
+            <ActionIcon
+              iconName="phone"
+              bgColor="#1652a3"
+              hrfLink="tel:+917428486574"
+            />
+            <ActionIcon
+              iconName="whatsapp"
+              bgColor="#25d266"
+              hrfLink="https://wa.link/izndv5"
+            />
+          </div>
+
+          <AppDrawer />
           <EnquireModel />
           <ThanksModel />
           {children}
