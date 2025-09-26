@@ -3,8 +3,7 @@ import React, { useContext } from "react";
 import styles from "./appdrawer.module.css";
 import { ModelsContext } from "@/contextApis/ModelContextProvider";
 import { IoCloseSharp } from "../Applicationicon";
-import ClickBtn from "../buttons/ClickBtn";
-import FullWidthBtn from "../buttons/fullWidthBtn";
+
 export default function AppDrawer() {
   const { isAppDrawer, setisAppDrawer, handelToggleAppDrawer } =
     useContext(ModelsContext);
@@ -45,9 +44,7 @@ export default function AppDrawer() {
           ))}
         </nav>
 
-        <div className={styles.footer}>
-          <FullWidthBtn />
-        </div>
+        <div className={styles.footer}></div>
       </div>
     </>
   );
